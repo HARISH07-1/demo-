@@ -14,5 +14,6 @@ jobs:
       - name: Run and test Docker image
         run: |
           docker run --detach --name demo-1 --publish 8083:80 demo-1
+          curl --fail --retry 10 --retry-connrefused --retry-delay 1 http://localhost:8083/
          
       
