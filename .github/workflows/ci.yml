@@ -13,6 +13,6 @@ jobs:
         run: docker build -t demo-1 .
       - name: Run and test Docker image
         run: |
-          docker run --detach --name demo-1 --publish 8080:80 demo-1
+          docker run --detach --name demo-1 --publish 8083:80 demo-1
          
       
